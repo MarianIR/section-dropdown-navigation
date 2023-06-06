@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Epilogue", sans-serif;
+}
+
+.page-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+@media (min-width: 1070px) {
+  .page-header {
+    height: 8rem;
+    display: flex;
+  }
+}
+.page-header .logo {
+  width: 8rem;
+  height: 2.5rem;
+  margin-top: 0.7rem;
+}
+.page-header .menu-buttons {
+  position: absolute;
+  right: 0;
+  padding: 1rem 2rem 2rem 2rem;
+  display: block;
+  z-index: 1 !important;
+}
+@media (min-width: 1070px) {
+  .page-header .menu-buttons {
+    display: none;
+  }
+}
+.page-header .menu-buttons .close-menu-btn {
+  display: none;
+}
+.page-header .navigation {
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  top: 0;
+  background-color: hsl(0, 0%, 98%);
+  font-size: 2rem;
+  color: hsl(0, 0%, 41%);
+  animation: slideInFromLeft 1s ease-in-out;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 2rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    height: 8rem;
+  }
+}
+.page-header .navigation .nav-list {
+  margin-top: 8rem;
+  padding-left: 2rem;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    width: 50%;
+    justify-content: space-around;
+  }
+}
+.page-header .navigation .nav-list .nav-element {
+  list-style: none;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.page-header .navigation .nav-list .features .arrow {
+  margin-left: 1rem;
+}
+.page-header .navigation .nav-list .features .arrow.active {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.page-header .navigation .nav-list .features .features-list {
+  padding: 1rem 0 2rem 2rem;
+  display: none;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-list .features .features-list {
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: absolute;
+  }
+}
+.page-header .navigation .nav-list .features .features-list .feature {
+  list-style: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-list .features .features-list .feature {
+    margin: 0;
+  }
+}
+.page-header .navigation .nav-list .features .features-list .feature .feature-icon {
+  padding: 1rem 1rem 0 0;
+}
+.page-header .navigation .nav-list .features .active-element-list.show {
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.page-header .navigation .nav-list .company {
+  padding: 1rem 0;
+}
+.page-header .navigation .nav-list .company .arrow {
+  margin-left: 1rem;
+}
+.page-header .navigation .nav-list .company .arrow.active {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.page-header .navigation .nav-list .company .company-list {
+  padding: 1rem 0 2rem 2rem;
+  list-style: none;
+  display: none;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-list .company .company-list {
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+}
+.page-header .navigation .nav-list .company .company-list .company-info {
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.page-header .navigation .nav-list .company .active-element-list.show {
+  display: block;
+}
+.page-header .navigation .nav-btns {
+  font-size: 2rem;
+  padding: 0 2rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-btns {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.page-header .navigation .nav-btns .login-btn,
+.page-header .navigation .nav-btns .register-btn {
+  background-color: transparent;
+  border: 0.2rem solid transparent;
+  font-size: 2rem;
+  color: hsl(0, 0%, 41%);
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 20rem;
+}
+.page-header .navigation .nav-btns .login-btn:hover,
+.page-header .navigation .nav-btns .register-btn:hover {
+  border: 0.2rem solid hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-btns .login-btn,
+  .page-header .navigation .nav-btns .register-btn {
+    margin: 0;
+  }
+}
+.page-header .navigation .nav-btns .login-btn:hover {
+  color: hsl(0, 0%, 41%);
+}
+@media (min-width: 1070px) {
+  .page-header .navigation .nav-btns .login-btn {
+    margin-right: 2rem;
+  }
+}
+.page-header .navigation .nav-btns .register-btn {
+  border: 0.2rem solid hsl(0, 0%, 41%);
+}
+.page-header .navigation .nav-btns .register-btn:hover {
+  border: 0.2rem solid transparent;
+  background-color: hsl(0, 0%, 41%);
+  color: hsl(0, 0%, 98%);
+  transition: all 0.3s ease-in-out;
+}
+.page-header .navigation.slide-out {
+  animation: slideInFromRight 1s ease-in-out;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  width: 100%;
+}
+@media (min-width: 1070px) {
+  .hero {
+    padding: 3rem 8rem 3rem 13rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+}
+.hero .hero-picture .main-image {
+  width: 100%;
+  max-width: 54rem;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.hero .hero-text {
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+@media (min-width: 1070px) {
+  .hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 2rem;
+    margin: 1rem 0;
+  }
+}
+.hero .hero-text .hero-article {
+  text-align: center;
+}
+@media (min-width: 1070px) {
+  .hero .hero-text .hero-article {
+    height: 100%;
+    text-align: left;
+  }
+}
+.hero .hero-text .hero-article .hero-heading {
+  font-size: clamp(2.5rem, 6vw, 8rem);
+  padding: 1rem 0;
+  color: hsl(0, 0%, 8%);
+  transition: 0.3s ease;
+  max-width: 70rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 1070px) {
+  .hero .hero-text .hero-article .hero-heading {
+    text-align: left;
+  }
+}
+.hero .hero-text .hero-article .paragraph {
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  padding: 1rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+@media (min-width: 1070px) {
+  .hero .hero-text .hero-article .paragraph {
+    margin: 3rem 0;
+  }
+}
+.hero .hero-text .hero-article .learn-more-btn {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  border: 0.2rem solid transparent;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero .hero-text .hero-article .learn-more-btn:hover {
+  border: 0.2rem solid hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.hero .hero-text .clients {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 50rem;
+}
+@media (min-width: 250px) {
+  .hero .hero-text .clients {
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 500px) {
+  .hero .hero-text .clients {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+@media (min-width: 1070px) {
+  .hero .hero-text .clients {
+    margin: 2rem 2rem 0 0;
+    justify-items: start;
+  }
+}
+.hero .hero-text .clients .client {
+  width: 8rem;
+  height: 2.5rem;
+}/*# sourceMappingURL=main.css.map */

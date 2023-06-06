@@ -1,0 +1,206 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  @media (min-width: 1070px) {
+    height: 8rem;
+    display: flex;
+  }
+  .logo {
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 0.7rem;
+  }
+  .menu-buttons {
+    position: absolute;
+    right: 0;
+    padding: 1rem 2rem 2rem 2rem;
+    display: block;
+    z-index: 1 !important;
+    @media (min-width: 1070px) {
+      display: none;
+    }
+    .open-menu-btn {
+    }
+    .close-menu-btn {
+      display: none;
+    }
+  }
+  .navigation {
+    // display: none;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 0;
+    background-color: $neurtalColor1;
+    font-size: 2rem;
+    color: $neurtalColor2;
+    animation: slideInFromLeft 1s ease-in-out;
+    @media (min-width: 1070px) {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      background-color: transparent;
+      padding: 2rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      height: 8rem;
+    }
+
+    .nav-list {
+      // display: none;
+      margin-top: 8rem;
+      padding-left: 2rem;
+      @media (min-width: 1070px) {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        width: 50%;
+        justify-content: space-around;
+      }
+      .nav-element {
+        list-style: none;
+        padding: 1rem 0;
+        cursor: pointer;
+        @media (min-width: 1070px) {
+          // margin-right: 1rem;
+        }
+      }
+      .features {
+        .arrow {
+          margin-left: 1rem;
+        }
+        .arrow.active {
+          transform: rotate(180deg);
+          transition: 0.3s;
+        }
+        .features-list {
+          padding: 1rem 0 2rem 2rem;
+          display: none;
+          @media (min-width: 1070px) {
+            margin-top: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            position: absolute;
+          }
+          .feature {
+            list-style: none;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            @media (min-width: 1070px) {
+              margin: 0;
+            }
+            .feature-icon {
+              padding: 1rem 1rem 0 0;
+            }
+          }
+        }
+        .active-element-list.show {
+          display: block;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      .company {
+        padding: 1rem 0;
+        .arrow {
+          margin-left: 1rem;
+        }
+        .arrow.active {
+          transform: rotate(180deg);
+          transition: 0.3s;
+        }
+        .company-list {
+          padding: 1rem 0 2rem 2rem;
+          list-style: none;
+          display: none;
+          @media (min-width: 1070px) {
+            margin-top: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+          }
+          .company-info {
+            padding: 1rem 0;
+            cursor: pointer;
+          }
+        }
+        .active-element-list.show {
+          display: block;
+        }
+      }
+    }
+    .nav-btns {
+      font-size: 2rem;
+      padding: 0 2rem;
+      margin: 5rem auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media (min-width: 1070px) {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      .login-btn,
+      .register-btn {
+        background-color: transparent;
+        border: 0.2rem solid transparent;
+        font-size: 2rem;
+        color: $neurtalColor2;
+        margin: 1rem auto;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 100%;
+        max-width: 20rem;
+        &:hover {
+          border: 0.2rem solid $neurtalColor3;
+          background-color: $neurtalColor1;
+          color: $neurtalColor3;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+        }
+        @media (min-width: 1070px) {
+          margin: 0;
+        }
+      }
+
+      .login-btn {
+        &:hover {
+          color: $neurtalColor2;
+        }
+        @media (min-width: 1070px) {
+          margin-right: 2rem;
+        }
+      }
+      .register-btn {
+        border: 0.2rem solid $neurtalColor2;
+        &:hover {
+          border: 0.2rem solid transparent;
+          background-color: $neurtalColor2;
+          color: $neurtalColor1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+  .navigation.slide-out {
+    animation: slideInFromRight 1s ease-in-out;
+  }
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}

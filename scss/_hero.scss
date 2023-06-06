@@ -1,0 +1,104 @@
+.hero {
+  width: 100%;
+  @media (min-width: 1070px) {
+    padding: 3rem 8rem 3rem 13rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .hero-picture {
+    .main-image {
+      width: 100%;
+      max-width: 54rem;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .hero-text {
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    @media (min-width: 1070px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      padding-left: 2rem;
+      margin: 1rem 0;
+    }
+    .hero-article {
+      text-align: center;
+      @media (min-width: 1070px) {
+        height: 100%;
+        text-align: left;
+      }
+      .hero-heading {
+        font-size: clamp(2.5rem, 6vw, 8rem);
+        padding: 1rem 0;
+        color: $neurtalColor3;
+        transition: 0.3s ease;
+        max-width: 70rem;
+        text-align: center;
+        margin: 0 auto;
+        @media (min-width: 1070px) {
+          text-align: left;
+        }
+      }
+      .paragraph {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);
+        color: $neurtalColor2;
+        line-height: 1.5;
+        letter-spacing: 0.1rem;
+        padding: 1rem 0;
+        max-width: 50rem;
+        // text-align: center;
+        margin: 0 auto;
+        @media (min-width: 1070px) {
+          margin: 3rem 0;
+        }
+      }
+      .learn-more-btn {
+        background-color: $neurtalColor3;
+        color: $neurtalColor1;
+        border: 0.2rem solid transparent;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+        &:hover {
+          border: 0.2rem solid $neurtalColor3;
+          background-color: $neurtalColor1;
+          color: $neurtalColor3;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+    .clients {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      justify-items: center;
+      gap: 2rem;
+      margin: 2rem auto;
+      max-width: 50rem;
+
+      @media (min-width: 250px) {
+        grid-template-columns: auto auto;
+      }
+      @media (min-width: 500px) {
+        grid-template-columns: auto auto auto auto;
+      }
+      @media (min-width: 1070px) {
+        margin: 2rem 2rem 0 0;
+        justify-items: start;
+      }
+      .client {
+        width: 8rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}

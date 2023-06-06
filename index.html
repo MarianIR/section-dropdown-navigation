@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <!-- This is page's header !!! -->
+    <header class="page-header">
+      <!-- Page logo -->
+      <img
+        src="./images/logo.svg"
+        alt="This is page's logo"
+        class="logo"
+        width="100"
+        height="30"
+      />
+      <!-- ///////// -->
+      <div class="menu-buttons">
+        <img
+          src="./images/icon-menu.svg"
+          alt="Clicking this button you will open the menu"
+          class="open-menu-btn"
+          width="30"
+          height="22"
+        />
+        <img
+          src="./images/icon-close-menu.svg"
+          alt="Clicking this button you will close the menu"
+          class="close-menu-btn"
+          width="30"
+          height="30"
+        />
+      </div>
+      <!-- ///////// -->
+      <!-- Page logo -->
+      <!-- ///////// -->
+      <!-- Page navigation -->
+      <nav class="navigation">
+        <!-- Navigation buttons -->
+
+        <!-- Navigation buttons -->
+        <!-- ////////// -->
+        <!-- Navigation List -->
+        <ul class="nav-list">
+          <li class="nav-element features active-nav-element">
+            Features
+            <img
+              src="./images/icon-arrow-down.svg"
+              alt="Arrow down"
+              class="arrow"
+            />
+            <ul class="features-list active-element-list">
+              <li class="feature">
+                <img
+                  src="./images/icon-todo.svg"
+                  alt="To do list"
+                  class="feature-icon"
+                />Todo List
+              </li>
+              <li class="feature">
+                <img
+                  src="./images/icon-calendar.svg"
+                  alt="Calendar"
+                  class="feature-icon"
+                />Calendar
+              </li>
+              <li class="feature">
+                <img
+                  src="./images/icon-reminders.svg"
+                  alt="Reminders"
+                  class="feature-icon"
+                />Reminders
+              </li>
+              <li class="feature">
+                <img
+                  src="./images/icon-planning.svg"
+                  alt="Reminders"
+                  class="feature-icon"
+                />Planning
+              </li>
+            </ul>
+          </li>
+          <ul class="nav-element company active-nav-element">
+            Company
+            <img
+              src="./images/icon-arrow-down.svg"
+              alt="Arrow down"
+              class="arrow"
+            />
+            <ul class="company-list active-element-list">
+              <li class="company-info">History</li>
+              <li class="company-info">Our Team</li>
+              <li class="company-info">Blog</li>
+            </ul>
+          </ul>
+          <li class="nav-element">Careers</li>
+          <li class="nav-element">About</li>
+        </ul>
+        <!-- Navigation List -->
+        <!-- /////////////// -->
+        <!-- Navigation buttons -->
+        <div class="nav-btns">
+          <button class="login-btn">Login</button>
+          <button class="register-btn">Register</button>
+        </div>
+        <!-- Navigation buttons -->
+        <!-- /////////////// -->
+      </nav>
+      <!-- Page navigation -->
+    </header>
+    <!-- This is page's header !!! -->
+    <!-- /////////////////// -->
+    <!-- /////////////////// -->
+    <main class="hero">
+      <picture class="hero-picture">
+        <source
+          srcset="./images/image-hero-desktop.png"
+          media="(min-width:1070px)"
+        />
+        <img
+          src="./images/image-hero-mobile.png"
+          alt="hero main image"
+          width="240"
+          height="240"
+          class="main-image"
+        />
+      </picture>
+      <section class="hero-text">
+        <article class="hero-article">
+          <h1 class="hero-heading">Make remote work</h1>
+          <p class="paragraph">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="learn-more-btn">Learn more</button>
+        </article>
+        <div class="clients">
+          <img
+            src="./images/client-databiz.svg"
+            alt="databiz client"
+            class="client"
+          />
+          <img
+            src="./images/client-audiophile.svg"
+            alt="audiophile client"
+            class="client"
+          />
+          <img
+            src="./images/client-meet.svg"
+            alt="meet client"
+            class="client"
+          />
+          <img
+            src="./images/client-maker.svg"
+            alt="maker client"
+            class="client"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- ///////////////// -->
+  </body>
+</html>
